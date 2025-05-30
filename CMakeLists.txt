@@ -11,5 +11,9 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 add_subdirectory(${PROJECT_NAME})
 
 # Tests
-enable_testing()
-add_subdirectory(tests)
+option(C_LOGGER_ENABLE_TESTS "Enable c-logger tests" ON)
+
+if(C_LOGGER_ENABLE_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
