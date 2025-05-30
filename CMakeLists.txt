@@ -9,3 +9,7 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 # Add main project
 add_subdirectory(${PROJECT_NAME})
+
+# Tests
+enable_testing()
+add_subdirectory(tests)

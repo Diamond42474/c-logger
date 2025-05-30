@@ -18,6 +18,7 @@ fi
 cd ${BUILD_DIR}
 cmake ..
 make
+ctest
 
 # Generate Doxygen documentation
 cd ${WORK_DIR}
