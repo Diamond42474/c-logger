@@ -2,10 +2,10 @@
 add_executable(c_logger_test c_logger_test.c)
 
 # Add the include directory for c-logger headers
-target_include_directories(c_logger_test PRIVATE ${CMAKE_SOURCE_DIR}/c-logger)
+target_include_directories(c_logger_test PRIVATE ${CMAKE_CURRENT_LIST_DIR}/../c-logger)
 target_sources(c_logger_test
     PRIVATE
-        ${CMAKE_SOURCE_DIR}/c-logger/c-logger.c
+        ${CMAKE_CURRENT_LIST_DIR}/../c-logger/c-logger.c
 )
 
 # Link with the logger library if it's built as a library
