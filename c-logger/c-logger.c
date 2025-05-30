@@ -19,7 +19,13 @@ void log_message(log_level_t level, const char *file, int line, const char *form
     return;
   }
 
-  const char *level_strings[] = {"DEBUG", "INFO", "WARN", "ERROR", "FATAL"};
+  const char *level_strings[] = {
+      "\x1b[36mDEBUG\x1b[0m", // Cyan
+      "\x1b[32mINFO\x1b[0m",  // Green
+      "\x1b[33mWARN\x1b[0m",  // Yellow
+      "\x1b[31mERROR\x1b[0m", // Red
+      "\x1b[35mFATAL\x1b[0m"  // Magenta
+  };
 
   // Extract base file name from path
   const char *basefile = file;
